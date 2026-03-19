@@ -1,0 +1,28 @@
+{
+  "name": "argentina-rp-bot",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsx server/index.ts",
+    "build": "tsc -p tsconfig.json && node scripts/fix-paths.cjs",
+    "start": "node dist/server/index.js",
+    "db:push": "drizzle-kit push"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.4.3",
+    "discord.js": "^14.25.1",
+    "drizzle-orm": "^0.39.3",
+    "express": "^4.21.0",
+    "pg": "^8.16.3",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.8",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.19.0",
+    "@types/pg": "^8.11.0",
+    "drizzle-kit": "^0.31.8",
+    "tsx": "^4.20.5",
+    "typescript": "^5.6.3"
+  }
+}
