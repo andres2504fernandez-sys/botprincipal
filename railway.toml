@@ -1,10 +1,6 @@
-import type { Config } from "drizzle-kit";
+[build]
+buildCommand = "npm install && npm run build"
 
-export default {
-  schema:    "./shared/schema.ts",
-  out:       "./drizzle",
-  dialect:   "postgresql",
-  dbCredentials: {
-    url: process.env.DATABASE_URL!,
-  },
-} satisfies Config;
+[deploy]
+startCommand = "npm start"
+restartPolicyType = "always"
